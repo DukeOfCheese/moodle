@@ -5,7 +5,7 @@ RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list
 
 # Install Moodle dependencies along with build tools for PHP extensions
 RUN apt-get update --fix-missing && apt-get install -y \
-    libxml2 libcurl4-openssl-dev libpng-dev libjpeg-dev libfreetype6-dev \
+    libcurl4-openssl-dev libpng-dev libjpeg-dev libfreetype6-dev \
     libzip-dev \
     gcc make autoconf libc-dev pkg-config \
     && docker-php-ext-install xml curl gd opcache
